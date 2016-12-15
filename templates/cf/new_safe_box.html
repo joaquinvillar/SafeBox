@@ -1,0 +1,9 @@
+{% block content %}
+    <form method="post" action="{% url 'cf:new_safe_box' %}">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <p><a href="{% url 'cf:index' %}">Return to home</a></p>
+{% endblock %}
